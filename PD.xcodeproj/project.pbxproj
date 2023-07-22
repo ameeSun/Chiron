@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410F5F3B2A47D0680067AD35 /* SpiralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F5F3A2A47D0680067AD35 /* SpiralView.swift */; };
+		410F5F3E2A47D0EC0067AD35 /* Spiral in Frameworks */ = {isa = PBXBuildFile; productRef = 410F5F3D2A47D0EC0067AD35 /* Spiral */; };
 		4199CC7E2A4234BC0054BE6F /* PDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CC7D2A4234BC0054BE6F /* PDApp.swift */; };
 		4199CC802A4234BC0054BE6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CC7F2A4234BC0054BE6F /* ContentView.swift */; };
 		4199CC822A4234BF0054BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4199CC812A4234BF0054BE6F /* Assets.xcassets */; };
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		410F5F3A2A47D0680067AD35 /* SpiralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiralView.swift; sourceTree = "<group>"; };
 		4199CC7A2A4234BC0054BE6F /* PD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4199CC7D2A4234BC0054BE6F /* PDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDApp.swift; sourceTree = "<group>"; };
 		4199CC7F2A4234BC0054BE6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410F5F3E2A47D0EC0067AD35 /* Spiral in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +124,7 @@
 				4199CC7D2A4234BC0054BE6F /* PDApp.swift */,
 				4199CC7F2A4234BC0054BE6F /* ContentView.swift */,
 				4199CCA82A4235FC0054BE6F /* HomeView.swift */,
+				410F5F3A2A47D0680067AD35 /* SpiralView.swift */,
 				4199CCAA2A42360F0054BE6F /* InfoView.swift */,
 				4199CCB02A42517F0054BE6F /* WhatIsItView.swift */,
 				4199CCB22A4253B40054BE6F /* CausesView.swift */,
@@ -178,6 +183,9 @@
 			dependencies = (
 			);
 			name = PD;
+			packageProductDependencies = (
+				410F5F3D2A47D0EC0067AD35 /* Spiral */,
+			);
 			productName = PD;
 			productReference = 4199CC7A2A4234BC0054BE6F /* PD.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 4199CC712A4234BC0054BE6F;
+			packageReferences = (
+				410F5F3C2A47D0EC0067AD35 /* XCRemoteSwiftPackageReference "Spiral" */,
+			);
 			productRefGroup = 4199CC7B2A4234BC0054BE6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,6 +307,7 @@
 				4199CCB32A4253B40054BE6F /* CausesView.swift in Sources */,
 				4199CCAD2A4236320054BE6F /* SupportView.swift in Sources */,
 				4199CCB52A4253F70054BE6F /* DiagnosisView.swift in Sources */,
+				410F5F3B2A47D0680067AD35 /* SpiralView.swift in Sources */,
 				4199CCB72A42540A0054BE6F /* SymptomsView.swift in Sources */,
 				4199CCAB2A42360F0054BE6F /* InfoView.swift in Sources */,
 				4199CCBD2A42544B0054BE6F /* SecondaryView.swift in Sources */,
@@ -648,6 +660,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		410F5F3C2A47D0EC0067AD35 /* XCRemoteSwiftPackageReference "Spiral" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/buh/Spiral";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		410F5F3D2A47D0EC0067AD35 /* Spiral */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 410F5F3C2A47D0EC0067AD35 /* XCRemoteSwiftPackageReference "Spiral" */;
+			productName = Spiral;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4199CC722A4234BC0054BE6F /* Project object */;
 }
