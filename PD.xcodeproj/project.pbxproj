@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		410F5F3B2A47D0680067AD35 /* SpiralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F5F3A2A47D0680067AD35 /* SpiralView.swift */; };
+		410F5F3B2A47D0680067AD35 /* PDSpiralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F5F3A2A47D0680067AD35 /* PDSpiralView.swift */; };
 		410F5F3E2A47D0EC0067AD35 /* Spiral in Frameworks */ = {isa = PBXBuildFile; productRef = 410F5F3D2A47D0EC0067AD35 /* Spiral */; };
 		4199CC7E2A4234BC0054BE6F /* PDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CC7D2A4234BC0054BE6F /* PDApp.swift */; };
 		4199CC802A4234BC0054BE6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CC7F2A4234BC0054BE6F /* ContentView.swift */; };
@@ -27,6 +27,9 @@
 		4199CCB92A4254280054BE6F /* TreatmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CCB82A4254280054BE6F /* TreatmentView.swift */; };
 		4199CCBB2A4254370054BE6F /* PreventionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CCBA2A4254370054BE6F /* PreventionView.swift */; };
 		4199CCBD2A42544B0054BE6F /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CCBC2A42544B0054BE6F /* SecondaryView.swift */; };
+		8C8AAC382A6B669100A6833D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8AAC372A6B669100A6833D /* Alamofire */; };
+		8CF0E46A2A72E17300DD7D58 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E4692A72E17300DD7D58 /* WelcomeView.swift */; };
+		8CF0E46C2A75C2CA00DD7D58 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E46B2A75C2CA00DD7D58 /* WaveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		410F5F3A2A47D0680067AD35 /* SpiralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiralView.swift; sourceTree = "<group>"; };
+		410F5F3A2A47D0680067AD35 /* PDSpiralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDSpiralView.swift; sourceTree = "<group>"; };
 		4199CC7A2A4234BC0054BE6F /* PD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4199CC7D2A4234BC0054BE6F /* PDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDApp.swift; sourceTree = "<group>"; };
 		4199CC7F2A4234BC0054BE6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 		4199CCB82A4254280054BE6F /* TreatmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentView.swift; sourceTree = "<group>"; };
 		4199CCBA2A4254370054BE6F /* PreventionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionView.swift; sourceTree = "<group>"; };
 		4199CCBC2A42544B0054BE6F /* SecondaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
+		8CF0E4692A72E17300DD7D58 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8CF0E46B2A75C2CA00DD7D58 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				410F5F3E2A47D0EC0067AD35 /* Spiral in Frameworks */,
+				8C8AAC382A6B669100A6833D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +129,10 @@
 			children = (
 				4199CC7D2A4234BC0054BE6F /* PDApp.swift */,
 				4199CC7F2A4234BC0054BE6F /* ContentView.swift */,
+				8CF0E4692A72E17300DD7D58 /* WelcomeView.swift */,
 				4199CCA82A4235FC0054BE6F /* HomeView.swift */,
-				410F5F3A2A47D0680067AD35 /* SpiralView.swift */,
+				410F5F3A2A47D0680067AD35 /* PDSpiralView.swift */,
+				8CF0E46B2A75C2CA00DD7D58 /* WaveView.swift */,
 				4199CCAA2A42360F0054BE6F /* InfoView.swift */,
 				4199CCB02A42517F0054BE6F /* WhatIsItView.swift */,
 				4199CCB22A4253B40054BE6F /* CausesView.swift */,
@@ -185,6 +193,7 @@
 			name = PD;
 			packageProductDependencies = (
 				410F5F3D2A47D0EC0067AD35 /* Spiral */,
+				8C8AAC372A6B669100A6833D /* Alamofire */,
 			);
 			productName = PD;
 			productReference = 4199CC7A2A4234BC0054BE6F /* PD.app */;
@@ -260,6 +269,7 @@
 			mainGroup = 4199CC712A4234BC0054BE6F;
 			packageReferences = (
 				410F5F3C2A47D0EC0067AD35 /* XCRemoteSwiftPackageReference "Spiral" */,
+				8C8AAC362A6B669100A6833D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4199CC7B2A4234BC0054BE6F /* Products */;
 			projectDirPath = "";
@@ -305,9 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4199CCB32A4253B40054BE6F /* CausesView.swift in Sources */,
+				8CF0E46C2A75C2CA00DD7D58 /* WaveView.swift in Sources */,
 				4199CCAD2A4236320054BE6F /* SupportView.swift in Sources */,
 				4199CCB52A4253F70054BE6F /* DiagnosisView.swift in Sources */,
-				410F5F3B2A47D0680067AD35 /* SpiralView.swift in Sources */,
+				410F5F3B2A47D0680067AD35 /* PDSpiralView.swift in Sources */,
 				4199CCB72A42540A0054BE6F /* SymptomsView.swift in Sources */,
 				4199CCAB2A42360F0054BE6F /* InfoView.swift in Sources */,
 				4199CCBD2A42544B0054BE6F /* SecondaryView.swift in Sources */,
@@ -317,6 +328,7 @@
 				4199CC802A4234BC0054BE6F /* ContentView.swift in Sources */,
 				4199CC7E2A4234BC0054BE6F /* PDApp.swift in Sources */,
 				4199CCB92A4254280054BE6F /* TreatmentView.swift in Sources */,
+				8CF0E46A2A72E17300DD7D58 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PD/Preview Content\"";
+				DEVELOPMENT_TEAM = 9B9QB6W23M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -507,6 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PD/Preview Content\"";
+				DEVELOPMENT_TEAM = 9B9QB6W23M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -670,6 +684,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8C8AAC362A6B669100A6833D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -677,6 +699,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 410F5F3C2A47D0EC0067AD35 /* XCRemoteSwiftPackageReference "Spiral" */;
 			productName = Spiral;
+		};
+		8C8AAC372A6B669100A6833D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C8AAC362A6B669100A6833D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -31,7 +31,7 @@ struct InfoView: View {
                     Image(systemName: "stethoscope")
                         .foregroundColor(Color(.systemPink))
                     NavigationLink("Diagnosis") {
-                        DiagnosisView()
+                        PDSpiralView()
                     }
                         .padding()
                 }
@@ -39,7 +39,8 @@ struct InfoView: View {
                     Image(systemName: "person.fill.questionmark")
                         .foregroundColor(Color(.systemPink))
                     NavigationLink("Symptoms") {
-                        SymptomsView()
+                        WaveView()
+                        //SymptomsView()
                     }
                         .padding()
                 }
