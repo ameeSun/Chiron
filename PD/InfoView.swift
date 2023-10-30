@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct InfoView: View {
+     
     var body: some View {
         NavigationStack {
             List {
                 HStack(){
                     Image(systemName: "person.fill.questionmark")
-                        .foregroundColor(Color(.systemPink))
+                        .foregroundColor(.pink.opacity(0.70))
                     NavigationLink("What is Parkinson's?") {
                         WhatIsItView()
                     }
@@ -21,7 +22,7 @@ struct InfoView: View {
                 }
                 HStack(){
                     Image(systemName: "brain")
-                        .foregroundColor(Color(.systemPink))
+                        .foregroundColor(.pink.opacity(0.70))
                     NavigationLink("Causes") {
                         CausesView()
                     }
@@ -29,24 +30,33 @@ struct InfoView: View {
                 }
                 HStack(){
                     Image(systemName: "stethoscope")
-                        .foregroundColor(Color(.systemPink))
+                        .foregroundColor(.pink.opacity(0.70))
                     NavigationLink("Diagnosis") {
-                        PDSpiralView()
+                        DiagnosisView()
                     }
                         .padding()
                 }
                 HStack(){
-                    Image(systemName: "person.fill.questionmark")
-                        .foregroundColor(Color(.systemPink))
+                    Image(systemName: "cross.case.fill")
+                        .foregroundColor(.pink.opacity(0.70))
                     NavigationLink("Symptoms") {
-                        WaveView()
-                        //SymptomsView()
+                        //WaveView()
+                        SymptomsView()
                     }
                         .padding()
                 }
                 HStack(){
-                    Image(systemName: "person.fill.questionmark")
-                        .foregroundColor(Color(.systemPink))
+                    Image(systemName: "metronome.fill")
+                        .foregroundColor(.pink.opacity(0.70))
+                    NavigationLink("Disease Rating Scale") {
+                        //WaveView()
+                        StagesView()
+                    }
+                        .padding()
+                }
+                HStack(){
+                    Image(systemName: "pills.fill")
+                        .foregroundColor(.pink.opacity(0.70))
                     //Image("drugs")
                         //.resizable()
                         //.aspectRatio(contentMode: .fit)
@@ -56,18 +66,26 @@ struct InfoView: View {
                         .padding()
                 }
                 HStack(){
-                    Image(systemName: "person.fill.questionmark")
-                        .foregroundColor(Color(.systemPink))
+                    Image(systemName: "nosign")
+                        .foregroundColor(.pink.opacity(0.70))
                     NavigationLink("Prevention") {
                         PreventionView()
                     }
                         .padding()
                 }
                 HStack(){
-                    Image(systemName: "person.fill.questionmark")
-                        .foregroundColor(Color(.systemPink))
+                    Image(systemName: "cross.vial.fill")
+                        .foregroundColor(.pink.opacity(0.70))
                     NavigationLink("Secondary Parkinsonism") {
                         SecondaryView()
+                    }
+                        .padding()
+                }
+                HStack(){
+                    Image(systemName: "list.clipboard.fill")
+                        .foregroundColor(.pink.opacity(0.70))
+                    NavigationLink("Additional Resources") {
+                        SupportView()
                     }
                         .padding()
                 }

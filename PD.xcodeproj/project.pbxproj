@@ -27,7 +27,12 @@
 		4199CCB92A4254280054BE6F /* TreatmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CCB82A4254280054BE6F /* TreatmentView.swift */; };
 		4199CCBB2A4254370054BE6F /* PreventionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CCBA2A4254370054BE6F /* PreventionView.swift */; };
 		4199CCBD2A42544B0054BE6F /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199CCBC2A42544B0054BE6F /* SecondaryView.swift */; };
+		8C1793A32AEDEB7E0009A71B /* AppSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1793A22AEDEB7E0009A71B /* AppSupportView.swift */; };
+		8C6C894B2AE5840A00BDFC57 /* StagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C894A2AE5840A00BDFC57 /* StagesView.swift */; };
 		8C8AAC382A6B669100A6833D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8AAC372A6B669100A6833D /* Alamofire */; };
+		8CAD5DEC2A802E1000EFEE4D /* TestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD5DEB2A802E1000EFEE4D /* TestsView.swift */; };
+		8CAD5DEE2A8032DD00EFEE4D /* PDSpiralResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD5DED2A8032DD00EFEE4D /* PDSpiralResultView.swift */; };
+		8CAD5DF02AE46F1A00EFEE4D /* PDWaveResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD5DEF2AE46F1A00EFEE4D /* PDWaveResultView.swift */; };
 		8CF0E46A2A72E17300DD7D58 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E4692A72E17300DD7D58 /* WelcomeView.swift */; };
 		8CF0E46C2A75C2CA00DD7D58 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E46B2A75C2CA00DD7D58 /* WaveView.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +78,11 @@
 		4199CCB82A4254280054BE6F /* TreatmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentView.swift; sourceTree = "<group>"; };
 		4199CCBA2A4254370054BE6F /* PreventionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionView.swift; sourceTree = "<group>"; };
 		4199CCBC2A42544B0054BE6F /* SecondaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
+		8C1793A22AEDEB7E0009A71B /* AppSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSupportView.swift; sourceTree = "<group>"; };
+		8C6C894A2AE5840A00BDFC57 /* StagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesView.swift; sourceTree = "<group>"; };
+		8CAD5DEB2A802E1000EFEE4D /* TestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsView.swift; sourceTree = "<group>"; };
+		8CAD5DED2A8032DD00EFEE4D /* PDSpiralResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDSpiralResultView.swift; sourceTree = "<group>"; };
+		8CAD5DEF2AE46F1A00EFEE4D /* PDWaveResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDWaveResultView.swift; sourceTree = "<group>"; };
 		8CF0E4692A72E17300DD7D58 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8CF0E46B2A75C2CA00DD7D58 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,17 +141,22 @@
 				4199CC7F2A4234BC0054BE6F /* ContentView.swift */,
 				8CF0E4692A72E17300DD7D58 /* WelcomeView.swift */,
 				4199CCA82A4235FC0054BE6F /* HomeView.swift */,
+				8CAD5DEB2A802E1000EFEE4D /* TestsView.swift */,
 				410F5F3A2A47D0680067AD35 /* PDSpiralView.swift */,
 				8CF0E46B2A75C2CA00DD7D58 /* WaveView.swift */,
+				8CAD5DED2A8032DD00EFEE4D /* PDSpiralResultView.swift */,
+				8CAD5DEF2AE46F1A00EFEE4D /* PDWaveResultView.swift */,
 				4199CCAA2A42360F0054BE6F /* InfoView.swift */,
 				4199CCB02A42517F0054BE6F /* WhatIsItView.swift */,
 				4199CCB22A4253B40054BE6F /* CausesView.swift */,
 				4199CCB42A4253F70054BE6F /* DiagnosisView.swift */,
 				4199CCB62A42540A0054BE6F /* SymptomsView.swift */,
+				8C6C894A2AE5840A00BDFC57 /* StagesView.swift */,
 				4199CCB82A4254280054BE6F /* TreatmentView.swift */,
 				4199CCBA2A4254370054BE6F /* PreventionView.swift */,
 				4199CCBC2A42544B0054BE6F /* SecondaryView.swift */,
 				4199CCAC2A4236320054BE6F /* SupportView.swift */,
+				8C1793A22AEDEB7E0009A71B /* AppSupportView.swift */,
 				4199CCAE2A4237A90054BE6F /* Storyboard.storyboard */,
 				4199CC812A4234BF0054BE6F /* Assets.xcassets */,
 				4199CC832A4234BF0054BE6F /* PD.entitlements */,
@@ -314,14 +329,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAD5DF02AE46F1A00EFEE4D /* PDWaveResultView.swift in Sources */,
 				4199CCB32A4253B40054BE6F /* CausesView.swift in Sources */,
 				8CF0E46C2A75C2CA00DD7D58 /* WaveView.swift in Sources */,
 				4199CCAD2A4236320054BE6F /* SupportView.swift in Sources */,
 				4199CCB52A4253F70054BE6F /* DiagnosisView.swift in Sources */,
 				410F5F3B2A47D0680067AD35 /* PDSpiralView.swift in Sources */,
+				8C6C894B2AE5840A00BDFC57 /* StagesView.swift in Sources */,
+				8CAD5DEE2A8032DD00EFEE4D /* PDSpiralResultView.swift in Sources */,
 				4199CCB72A42540A0054BE6F /* SymptomsView.swift in Sources */,
 				4199CCAB2A42360F0054BE6F /* InfoView.swift in Sources */,
 				4199CCBD2A42544B0054BE6F /* SecondaryView.swift in Sources */,
+				8CAD5DEC2A802E1000EFEE4D /* TestsView.swift in Sources */,
+				8C1793A32AEDEB7E0009A71B /* AppSupportView.swift in Sources */,
 				4199CCA92A4235FC0054BE6F /* HomeView.swift in Sources */,
 				4199CCBB2A4254370054BE6F /* PreventionView.swift in Sources */,
 				4199CCB12A42517F0054BE6F /* WhatIsItView.swift in Sources */,

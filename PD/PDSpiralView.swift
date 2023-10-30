@@ -16,6 +16,7 @@ struct PDSpiralView: View {
     @State private var smoothness: CGFloat = 50
     private var canvasView = PKCanvasView()
     @State private var test_result: String = ""
+    @State private var path = NavigationPath()
     
     
     struct Resp: Decodable, CustomStringConvertible {
@@ -31,10 +32,7 @@ struct PDSpiralView: View {
     var body: some View {
         
         VStack() {
-            Text("Spiral Test")
-                .bold()
-                .font(.title)
-                .padding()
+            
             ZStack() {
                 
                 Spiral(
@@ -43,7 +41,7 @@ struct PDSpiralView: View {
                     smoothness: smoothness
                 )
                 .stroke(
-                    Color.blue,
+                    Color.pink,
                     style: .init(lineWidth: lineWidth, lineCap: .round, lineJoin: .round)
                 )
                 .opacity(0.5)
@@ -59,14 +57,54 @@ struct PDSpiralView: View {
                  )*/
                 
                 Text(test_result)
-                    
+                Image("favicon.ico")
+                
             }
-            //.padding()
-            HStack(){
-                Button("Clear", action: clear)
-                Button("Save", action: saveImage)
-                Button("Stats", action: statsImage)
-                Button("Submit", action: analyzeImage)
+            VStack(){
+                /*
+                 Button("Redraw", action: clear)
+                    .font(.title)
+                 
+                Button("Save", action: saveImage).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                //Button("Stats", action: statsImage)
+                //Button("Submit", action: analyzeImage)
+                */
+                HStack{
+                    Button(action: clear
+                    ) {
+                        Image(systemName: "pencil")
+                            .foregroundColor(.black)
+                        Text("Redraw")
+                            .padding(.horizontal)
+                            .font(.headline)
+                            .foregroundColor(.black)
+                    }.padding().background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.pink, lineWidth: 1)
+                    ).padding()
+                    
+                    Button(action: saveImage
+                    ) {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundColor(.black)
+                        Text("Save")
+                            .padding(.horizontal)
+                            .font(.headline)
+                            .foregroundColor(.black)
+                    }.padding().background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.pink, lineWidth: 1)
+                    ).padding()
+                }
+                NavigationLink("Submit") {
+                    PDSpiralResultView(path: $path,canvasView: canvasView)
+                }.navigationTitle("Spiral Test").font(.headline).padding().background(
+                    RoundedRectangle(cornerRadius: 10)
+                      .stroke(.pink, lineWidth: 1)
+                ).padding().foregroundColor(.black)
+
+
+
             }
         }
     }
@@ -92,41 +130,41 @@ struct PDSpiralView: View {
     }
     func analyzeImage() {
         let ts  = "2023"
-               let place = "VA"
+        let place = "VA"
         
         let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0).withTintColor(.systemPink, renderingMode: .alwaysOriginal)
-               var parameters = ["ts":ts, "place":place]
+        var parameters = ["ts":ts, "place":place]
         
         
-
-               AF.upload(
-                   multipartFormData: { multipartFormData in
-                       if let spiral_data = image.pngData() {
-                                              multipartFormData.append(spiral_data, withName: "file", fileName: "spiral.png", mimeType: "image/png")
-                                          }
-                       
-                       for (key, value) in parameters {
-                                                  multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
-                                              }
-},
-                   to: "https://qtechsolutions.net/pd/api/imageUpload", method: .post)
-                   .response { response in
-                       switch response.result {
-                                   case .success(let data):
-                                       let newJSONDecoder = JSONDecoder()
-                                       if let result = try? newJSONDecoder.decode(Resp.self, from: data!){
-                                           test_result=result.result
-                                           print(result.result)
-                                           
-                                              
-                                       }
-                                   case .failure(let error):
-                                       print(error)
-                                   }
-
-               }
-               
-               
+        
+        AF.upload(
+            multipartFormData: { multipartFormData in
+                if let spiral_data = image.pngData() {
+                    multipartFormData.append(spiral_data, withName: "file", fileName: "spiral.png", mimeType: "image/png")
+                }
+                
+                for (key, value) in parameters {
+                    multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
+                }
+            },
+            to: "https://qtechsolutions.net/pd/api/imageUpload", method: .post)
+        .response { response in
+            switch response.result {
+            case .success(let data):
+                let newJSONDecoder = JSONDecoder()
+                if let result = try? newJSONDecoder.decode(Resp.self, from: data!){
+                    test_result=result.result
+                    print(result.result)
+                    
+                    
+                }
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+        
+        
         
         
     }
@@ -136,7 +174,7 @@ struct PDSpiralView: View {
         test_result=""
     }
 }
-    
+
 private extension CGFloat {
     static let lineWidth: CGFloat = 10
     
@@ -154,7 +192,7 @@ struct MyCanvas: UIViewRepresentable {
     let picker = PKToolPicker.init()
     
     func makeUIView(context: Context) -> PKCanvasView {
-        self.canvasView.tool = PKInkingTool(.pen, color: .green, width: 20)
+        self.canvasView.tool = PKInkingTool(.pen, color: .systemPink, width: 20)
         self.canvasView.becomeFirstResponder()
         self.canvasView.backgroundColor = .clear
         self.canvasView.isOpaque = false
@@ -164,10 +202,10 @@ struct MyCanvas: UIViewRepresentable {
     
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
         /*picker.addObserver(canvasView)
-        picker.setVisible(true, forFirstResponder: uiView)
-        DispatchQueue.main.async {
-            uiView.becomeFirstResponder()
-        }
+         picker.setVisible(true, forFirstResponder: uiView)
+         DispatchQueue.main.async {
+         uiView.becomeFirstResponder()
+         }
          */
     }
 }

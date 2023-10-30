@@ -34,7 +34,7 @@ struct Wave: Shape {
         // start at the left center
         //path.move(to: CGPoint(x: 0, y: midHeight))
         
-        let graphWidth: CGFloat = 0.8  // Graph is 80% of the width of the view
+        let graphWidth: CGFloat = 1  // Graph is 80% of the width of the view
         let amplitude: CGFloat = 0.25
         
         let origin = CGPoint(x: width * (1 - graphWidth) / 2, y: height * 0.50)
@@ -58,6 +58,7 @@ struct WaveView: View {
     @State private var phase = 0.0
     private var canvasView = PKCanvasView()
     @State private var test_result: String = ""
+    @State private var path = NavigationPath()
     
     struct Resp: Decodable, CustomStringConvertible {
         let result: String
@@ -71,26 +72,58 @@ struct WaveView: View {
     
     var body: some View {
         VStack {
-            Text("Spiral Test")
-                .bold()
-                .font(.title)
-                .padding()
+            
             ZStack() {
-                Wave(strength: 50, frequency: 4, phase: self.phase)
-                    .stroke(Color.blue, lineWidth: 5)
+                Wave(strength: 50, frequency: 3, phase: self.phase)
+                    .stroke(Color.pink, lineWidth: 10)
+                    .opacity(0.5)
+
+
                 MyCanvas(canvasView: canvasView)
                 Text(test_result)
             }
             
-            HStack(){
-                Button("Clear", action: clear)
-                Button("Save", action: saveImage)
-                Button("Submit", action: analyzeImage)
+            VStack(){
+                HStack{
+                    Button(action: clear
+                    ) {
+                        Image(systemName: "pencil")
+                            .foregroundColor(.black)
+                        Text("Redraw")
+                            .padding(.horizontal)
+                            .font(.headline)
+                            .foregroundColor(.black)
+                    }.padding().background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.pink, lineWidth: 1)
+                    ).padding()
+                    
+                    Button(action: saveImage
+                    ) {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundColor(.black)
+                        Text("Save")
+                            .padding(.horizontal)
+                            .font(.headline)
+                            .foregroundColor(.black)
+                    }.padding().background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.pink, lineWidth: 1)
+                    ).padding()
+                }
+                NavigationLink("Submit") {
+                    PDWaveResultView(path: $path,canvasView: canvasView)
+                }.navigationTitle("Spiral Test").font(.headline).padding().background(
+                    RoundedRectangle(cornerRadius: 10)
+                      .stroke(.pink, lineWidth: 1)
+                ).padding().foregroundColor(.black)
+
+                }
             }
         }
         
         
-    }
+    
     
     func saveImage() {
         let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
