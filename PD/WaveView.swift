@@ -72,7 +72,8 @@ struct WaveView: View {
     
     var body: some View {
         VStack {
-            
+            Spacer(minLength: 30)
+            ExtractView(fieldText: "Click for Instructions",fieldInfo: "Trace the wave and hit submit to complete\n the test!")
             ZStack() {
                 Wave(strength: 50, frequency: 3, phase: self.phase)
                     .stroke(Color.pink, lineWidth: 10)

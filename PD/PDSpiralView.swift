@@ -32,7 +32,9 @@ struct PDSpiralView: View {
     var body: some View {
         
         VStack() {
-            
+            Spacer(minLength: 30)
+            ExtractView(fieldText: "Click for Instructions",fieldInfo: "Trace the spiral and hit submit to complete\n the test!")
+                .padding()
             ZStack() {
                 
                 Spiral(
@@ -207,5 +209,30 @@ struct MyCanvas: UIViewRepresentable {
          uiView.becomeFirstResponder()
          }
          */
+    }
+}
+struct ExtractView: View {
+    @State private var showingPopover = false
+    let fieldText: String
+    let fieldInfo: String
+    
+    var body: some View {
+        HStack {
+            Button(){
+                showingPopover = true
+            } label: {
+                Label(fieldText, systemImage: "info.circle").labelStyle(.trailingIcon).frame(width: 360, alignment: .center).font(.title2)
+            }
+            .popover(isPresented: $showingPopover,
+                     attachmentAnchor: .point(.bottom),
+                     arrowEdge: .top,
+                     content: {
+                Text(fieldInfo)
+                    .presentationCompactAdaptation(.none)
+                    .padding()
+            })
+            .cornerRadius(0.0)
+            
+        }
     }
 }

@@ -56,7 +56,7 @@
 
 /* Begin PBXFileReference section */
 		410F5F3A2A47D0680067AD35 /* PDSpiralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDSpiralView.swift; sourceTree = "<group>"; };
-		4199CC7A2A4234BC0054BE6F /* PD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4199CC7A2A4234BC0054BE6F /* Chiron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chiron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4199CC7D2A4234BC0054BE6F /* PDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDApp.swift; sourceTree = "<group>"; };
 		4199CC7F2A4234BC0054BE6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4199CC812A4234BF0054BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		4199CCBA2A4254370054BE6F /* PreventionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionView.swift; sourceTree = "<group>"; };
 		4199CCBC2A42544B0054BE6F /* SecondaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
 		8C1793A22AEDEB7E0009A71B /* AppSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSupportView.swift; sourceTree = "<group>"; };
+		8C1793A42AF1D41D0009A71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8C6C894A2AE5840A00BDFC57 /* StagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesView.swift; sourceTree = "<group>"; };
 		8CAD5DEB2A802E1000EFEE4D /* TestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsView.swift; sourceTree = "<group>"; };
 		8CAD5DED2A8032DD00EFEE4D /* PDSpiralResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDSpiralResultView.swift; sourceTree = "<group>"; };
@@ -127,7 +128,7 @@
 		4199CC7B2A4234BC0054BE6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4199CC7A2A4234BC0054BE6F /* PD.app */,
+				4199CC7A2A4234BC0054BE6F /* Chiron.app */,
 				4199CC8B2A4234C00054BE6F /* PDTests.xctest */,
 				4199CC952A4234C00054BE6F /* PDUITests.xctest */,
 			);
@@ -137,6 +138,7 @@
 		4199CC7C2A4234BC0054BE6F /* PD */ = {
 			isa = PBXGroup;
 			children = (
+				8C1793A42AF1D41D0009A71B /* Info.plist */,
 				4199CC7D2A4234BC0054BE6F /* PDApp.swift */,
 				4199CC7F2A4234BC0054BE6F /* ContentView.swift */,
 				8CF0E4692A72E17300DD7D58 /* WelcomeView.swift */,
@@ -211,7 +213,7 @@
 				8C8AAC372A6B669100A6833D /* Alamofire */,
 			);
 			productName = PD;
-			productReference = 4199CC7A2A4234BC0054BE6F /* PD.app */;
+			productReference = 4199CC7A2A4234BC0054BE6F /* Chiron.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4199CC8A2A4234C00054BE6F /* PDTests */ = {
@@ -506,6 +508,10 @@
 				DEVELOPMENT_TEAM = 9B9QB6W23M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PD/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -515,14 +521,13 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ak.PD;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chiron;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -543,6 +548,10 @@
 				DEVELOPMENT_TEAM = 9B9QB6W23M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PD/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -552,14 +561,13 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ak.PD;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chiron;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;

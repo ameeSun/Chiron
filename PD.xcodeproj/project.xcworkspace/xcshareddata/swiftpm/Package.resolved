@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "bc268c28fb170f494de9e9927c371b8342979ece",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "spiral",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/buh/Spiral",
+      "state" : {
+        "revision" : "c529d2e71152edf6890f5f508689de17936d6e96",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
