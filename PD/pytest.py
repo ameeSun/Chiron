@@ -213,10 +213,10 @@ def parkinson_disease_detection_model(input_shape=(224, 224, 1)):
     output = Dense(2, activation="softmax")(dense2)
 
     model  = Model(inputs=_input, outputs=output)
-    #optimizer = Adam(3.15e-5)
-    opt = Adam(learning_rate=0.001)
-    model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
-    #model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+    optimizer = Adam(3.15e-5)
+    #opt = Adam(learning_rate=0.001)
+    #model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
 model= parkinson_disease_detection_model(input_shape=(224, 224, 1))
